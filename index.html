@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="author" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="copyright" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="description" content="jMerrygoround - jQuery Plugin" />
+    <meta name="keywords" content="javascript,javascripter,java,actionscript,flash,art" />
+    <meta name="robots" content="all,follow" />
+    <link href="css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<style type="text/css" media="screen">
+		.jMerrygoround {
+			margin-bottom: 20px;
+		}
+		
+		#imageWraper1 {
+			position: relative;
+			margin: 0px auto;
+			width: 700px;
+			height: 350px;
+			border: 1px dashed;
+		}
+
+		#imageWraper1 img {
+			display: none;
+		}
+		
+		.jMerrygoroundBtn {
+			text-align: center;
+		}
+	</style>
+
+    <title>jMerrygoround - jQuery Plugin</title>
+  </head>
+  <body>
+    <div id="layout">
+      
+      <div id="header">
+        
+        <h1 id="logo"><a href="index.html">jMerrygoround<span>.js</span></a></h1>
+        <hr class="noscreen" />   
+          
+        <div id="navigation">
+	        <ul>
+	          <li><a href="http://hisasann.com/" title="HOME">HOME</a></li>
+	          <li><a href="#documentation" title="DOCUMENTATION">DOCUMENTATION</a></li>
+	          <li><a href="#demo" title="DEMO">DEMO</a></li>
+	          <li><a href="#extention" title="EXTENTION">EXTENTION</a></li>
+	          <li><a href="#download" title="DOWNLOAD">DOWNLOAD</a></li>
+	        </ul>
+        </div>
+        <hr class="noscreen" />  
+      </div>
+      
+        <div id="main">
+        
+        <h2 id="products">Example</h2>
+		<div class="jMerrygoround">
+			<div id="imageWraper1">
+				<a href="#"><img src="img/1.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/2.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/3.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/4.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/5.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/6.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/7.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/8.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/9.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/10.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/11.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/12.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/13.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="img/14.jpg" width="100%" height="100%"/></a>
+				<!-- <img src="img/1.jpg" width="100%" height="100%"/>
+				<img src="img/2.jpg" width="100%" height="100%"/>
+				<img src="img/3.jpg" width="100%" height="100%"/>
+				<img src="img/4.jpg" width="100%" height="100%"/>
+				<img src="img/5.jpg" width="100%" height="100%"/>
+				<img src="img/6.jpg" width="100%" height="100%"/>
+				<img src="img/7.jpg" width="100%" height="100%"/>
+				<img src="img/8.jpg" width="100%" height="100%"/>
+				<img src="img/9.jpg" width="100%" height="100%"/>
+				<img src="img/10.jpg" width="100%" height="100%"/>
+				<img src="img/11.jpg" width="100%" height="100%"/>
+				<img src="img/12.jpg" width="100%" height="100%"/>
+				<img src="img/13.jpg" width="100%" height="100%"/>
+				<img src="img/14.jpg" width="100%" height="100%"/> -->
+			</div>
+			<br><br>
+			<div class="jMerrygoroundBtn">
+				<input type="button" id="prev" value="&lt;" />
+				<input type="button" id="next" value="&gt;" />
+			</div>
+		</div>
+
+        <h2 id="documentation">Documentation</h2>
+		jMerrygoroundは画像が3D空間にいるように配置する<a href="http://jquery.com/" target="_blank">jQuery</a> Pluginです。<br>
+		画像の大きさや配置、アニメーションの方法まで様々な部分を呼び出すときに設定することができ、使う人のサイトに配置しやすいように作られています。<br>
+		<br>
+		たとえば↑のExampleの場合は以下のようなコードになります。<br>
+		また以下のセットが基本となるセットになります。<br>
+		jMerrygoroundを使ってみてうまく表示されない、または崩れてしまう場合は以下のサンプルを参考にしてください。
+
+		<h3>サンプルコード</h3>
+		<h4>JavaScript</h4>
+		<textarea class="js" name="code">
+			$("#imageWraper1").jMerrygoround({
+				radiusX: 250,
+				radiusY: 40,
+				centerX: 270,
+				centerY: 130,
+				width: 200,
+				height: 150,
+				action: "click",
+				motion: "normal",
+				duration: 500,
+				easing: "easeInOutQuart",
+				targetElem: "a",
+				reflection: true
+			});
+		</textarea>
+		
+		<h4>HTML</h4>
+		imgタグに<strong>width="100%"</strong>と<strong>height="100%"</strong>を指定していますが、これは<strong>必須</strong>になります。
+		<textarea name="code" class="html">
+			&lt;div id="imageWraper1"&gt;
+				&lt;a href="#"&gt;&lt;img src="img/1.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/2.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/3.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/4.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/5.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/6.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/7.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/8.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/9.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/10.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/11.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/12.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/13.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="img/14.jpg" width="100%" height="100%"/&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class="jMerrygoroundBtn"&gt;
+				&lt;input type="button" id="prev" value="&lt;" /&gt;
+				&lt;input type="button" id="next" value="&gt;" /&gt;
+			&lt;/div&gt;
+		</textarea>
+		
+		<h4>CSS</h4>
+		#imageWraper1セレクターではposition: relative;で相対位置を指定していますが、これもあったほうがよいでしょう。<br>
+		imgをdisplay:none;にしていますが、これはjMerrygoroundが動きだすタイミングではまだ画像の位置がHTML要素順になってしまい画像のちらつきの原因になってしまうのを防いでいます。<br>
+		display:none;で非表示になっていても、jMerrygoround側が画面位置を確定した後で表示します。
+		<textarea name="code" class="css">
+			#imageWraper1 {
+				position: relative;
+				margin: 0px auto;
+				width: 700px;
+				height: 340px;
+				border: 1px dashed;
+			}
+
+			#imageWraper1 img {
+				display: none;
+			}
+
+			.jMerrygoroundBtn {
+				text-align: center;
+			}
+		</textarea>
+
+        <h3>Options</h3>
+		各パラメータはjMerrygoround側でデフォルト値を持っているので何も設定しなくても動作します。<br>
+		ただしcenterXやcenterYなどで配置する場所を調整する必要がありますが、とりあえず動作確認したい場合には不要です。
+
+        <table>
+          <tr class="table-top">
+            <td class="left">Parameter名</td>
+            <td class="center">Defalut値</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>radiusX</td>
+            <td>200</td>
+            <td>Merrygoround円の横半径になります。</td>
+          </tr>
+          <tr>
+            <td>radiusY</td>
+            <td>30</td>
+            <td>Merrygoround円の縦半径になります。</td>
+          </tr>
+          <tr>
+            <td>centerX</td>
+            <td>250</td>
+            <td>PositionのLeft座標値になります。この数値を小さくすれば左方向に、大きくすれば右方向にMerrygoround全体が移動します。</td>
+          </tr>
+          <tr>
+            <td>centerY</td>
+            <td>100</td>
+            <td>PositionのTop座標値になります。この数値を小さくすれば上方向に、大きくすれば下方向にMerrygoround全体が移動します。</td>
+          </tr>
+          <tr>
+            <td>width</td>
+            <td>140</td>
+            <td>画像が一番大きいところの横幅になります。</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>100</td>
+            <td>画像が一番大きいところの縦幅になります。</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>click</td>
+            <td><strong>click、mouseover、mousedown,auto</strong>の中から選んで設定してください。</td>
+          </tr>
+          <tr>
+            <td>motion</td>
+            <td>normal</td>
+            <td>actionでclickを選択した場合にクリック動作を指定します。<br>デフォルトでは<strong>normal、spiral、shake、grow、delay</strong>が使えますが、開発者が自分で追加することも可能です。詳しくは以下の「Extention」をご覧ください。</td>
+          </tr>
+          <tr>
+            <td>duration</td>
+            <td>800</td>
+            <td>actionでclickを指定した場合に1回の動きの速度を設定します。<br>1000が1秒を表します。</td>
+          </tr>
+          <tr>
+            <td>easing</td>
+            <td>swing</td>
+            <td>actionでclickを設定した場合に動きのタイプを設定します。<br>ここの値を変えることで様々なモーションで動作するようになります。<br><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing Plugin</a>を使うことでさらにアニメーションを増やすことができます。</td>
+          </tr>
+          <tr>
+            <td>nextId</td>
+            <td>#next</td>
+            <td>actionでclickを指定した場合にMerrygoroundが次の場所へ移動するためのボタンIDになります。</td>
+          </tr>
+          <tr>
+            <td>prevId</td>
+            <td>#prev</td>
+            <td>actionでclickを指定した場合にMerrygoroundが前の場所へ移動するためのボタンIDになります。</td>
+          </tr>
+          <tr>
+            <td>targetElem</td>
+            <td>img</td>
+            <td>Merrygoroundさせるターゲットとなる要素を設定します。<br>$("#sample")で指定した要素の直下に画像が並んでいる場合はimgと指定します。<br>もし画像がアンカータグでラッピングされている場合はaと設定してください。</td>
+          </tr>
+          <tr>
+            <td>reflection</td>
+            <td>false</td>
+            <td>画像に水面の反射のような効果を付ける場合にtrueを設定してください。</td>
+          </tr>
+          </table>
+
+        <h2 id="demo">Demo</h2>
+		<ul>
+			<li><a href="demo/actionAuto.html">Action - Auto</a></li>
+			<li><a href="demo/actionMouseover.html">Action - Mouseover</a></li>
+			<li><a href="demo/actionMouseoverKingbonbi.html">Action - Mouseover - Kingbonbi!!</a></li>
+			<li><a href="demo/actionMousedown.html">Action - Mousedown</a></li>
+			<li><a href="demo/actionClickNormal.html">Action - Click - Normal</a></li>
+			<li><a href="demo/actionClickSpiral.html">Action - Click - Spiral</a></li>
+			<li><a href="demo/actionClickShake.html">Action - Click - Shake</a></li>
+			<li><a href="demo/actionClickGrow.html">Action - Click - Grow</a></li>
+			<li><a href="demo/actionClickDelay.html">Action - Click - Delay</a></li>
+		</ul>
+		
+        <h2 id="extention">Extention</h2>
+		jMerrygoroundのClickアニメーションは開発者が追加することができます。<br>
+		たとえばactionにclickを指定し、motionにnormalを指定した場合の実際のコードは以下のようになります。<br>
+
+		<textarea class="js" name="code">
+		// click animation - normal
+		$.fn.jMerrygoround.click.normal = function(elem, offset){
+			elem.css({
+					zIndex: offset.zIndex,
+					opacity: offset.opacity
+				}).animate(
+				{
+					left: offset.left + 'px',
+					top: offset.top + 'px',
+					width: offset.width + 'px',
+					height: offset.height + 'px'
+				},
+				{queue: true, duration: options.duration, easing: options.easing, complete: function(){}}
+			);
+		};
+		</textarea>
+		
+		このように$.fn.jMerrygoround.clickの後に適当な名前で関数を追加すると、motionが追加されます。<br>
+		この関数が画像の個数分呼び出されます。<br>
+		追加したmotionを適用するには、jMerrygoroundの引数のmotionに追加した関数名を指定してください。<br>
+		
+		<table>
+          <tr class="table-top">
+            <td class="left">Parameter名</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>elem</td>
+            <td>
+            	一つの画像要素を持つjQueryオブジェクトです。
+            </td>
+          </tr>
+          <tr>
+            <td>offset</td>
+            <td>画像が次に移動する場所の<strong>zIndex、opacity、left、top、width、height</strong>が入っています。</td>
+          </tr>
+          <tr>
+            <td>index</td>
+            <td>画像のindexが入っています。</td>
+          </tr>
+        </table>
+
+        <h2 id="download">Download</h2>
+		<ul>
+			<li><a href="http://gist.github.com/85489" target="_blank">gist: 85489 - GitHub</a></li>
+			<li><a href="jMerrygoround.zip">Zip</a></li>
+		</ul>
+
+        <!-- <table>
+          <tr class="table-top">
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+          </tr>
+          <tr>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          </table> -->
+          
+        </div>
+        </div>
+        <div id="footer">
+        <div id="footer-inside">
+        <p id="copyright">&copy; 2008 - <a href="http://hisasann.com/">hisasann</a></p>
+        
+        <!-- Please don't delete this. You can use this template for free and this is the only way that you can say thanks to me -->
+          <p id="dont-delete-this">Design by <a href="http://www.davidkohout.cz">David Kohout</a> | Our tip: <a href="http://www.goodmood.cz" title="Absinthe, Becherovka, Slivovitz store">Absinthe Store</a></p>
+        <!-- Thank you :) -->
+        
+        </div><div style="clear: both;"></div></div>
+		<script src="js/jquery-1.3.2.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jMerrygoround.js"></script>
+		<!-- syntax -->
+		<link rel="stylesheet" href="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css" type="text/css" />  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shCore.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>  
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				dp.SyntaxHighlighter.ClipboardSwf = 'http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/clipboard.swf';
+				dp.SyntaxHighlighter.HighlightAll('code');
+
+				// fadeInOut
+				$("#logo").fadeOut().fadeIn();
+
+				// smooth scroller
+				$("a[href^=#]").click(function() {
+					var hash = this.hash;
+					if(!hash || hash == "#")
+						return false;
+					$($.browser.safari ? 'body' : 'html')
+						.animate({scrollTop: $(hash).offset().top}, 1500, "easeInOutBounce");
+					return false;
+				});
+			});
+			
+			$(window).load(function() {
+				// jMerrygoround
+				$("#imageWraper1").jMerrygoround({
+					radiusX: 250,
+					radiusY: 40,
+					centerX: 270,
+					centerY: 130,
+					width: 200,
+					height: 150,
+					action: "click",
+					motion: "normal",
+					duration: 500,
+					easing: "easeInOutQuart",
+					targetElem: "a",
+					reflection: true
+				});
+			});
+		</script>
+  </body>
+</html>

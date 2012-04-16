@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="author" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="copyright" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="description" content="jMerrygoround Demo - jQuery Plugin" />
+    <meta name="keywords" content="javascript,javascripter,java,actionscript,flash,art" />
+    <meta name="robots" content="all,follow" />
+    <link href="../css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<style type="text/css" media="screen">
+		.jMerrygoround {
+			margin-bottom: 20px;
+		}
+		
+		#imageWraper1 {
+			position: relative;
+			margin: 0px auto;
+			width: 700px;
+			height: 350px;
+			border: 1px dashed;
+		}
+
+		#imageWraper1 img {
+			display: none;
+		}
+		
+		.jMerrygoroundBtn {
+			text-align: center;
+		}
+	</style>
+
+    <title>jMerrygoround Demo - jQuery Plugin</title>
+  </head>
+  <body>
+    <div id="layout">
+      
+      <div id="header">
+        
+        <h1 id="logo"><a href="../index.html">jMerrygoround<span>.js</span></a></h1>
+        <hr class="noscreen" />   
+          
+        <div id="navigation">
+	        <ul>
+	          <li><a href="../index.html" title="HOME">HOME</a></li>
+	        </ul>
+        </div>
+        <hr class="noscreen" />  
+      </div>
+      
+        <div id="main">
+        
+        <h2 id="products">jMerrygoround - Demo</h2>
+        <h3>Action : Click : Grow</h3>
+		<h4>View</h4>
+		<div class="jMerrygoround">
+			<div id="imageWraper1">
+				<a href="#"><img src="../img/1.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/2.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/3.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/4.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/5.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/6.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/7.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/8.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/9.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/10.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/11.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/12.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/13.jpg" width="100%" height="100%"/></a>
+				<a href="#"><img src="../img/14.jpg" width="100%" height="100%"/></a>
+			</div>
+			<br><br>
+			<div class="jMerrygoroundBtn">
+				<input type="button" id="prev" value="<" />
+				<input type="button" id="next" value=">" />
+			</div>
+		</div>
+		<h4>Code</h4>
+		<textarea class="js" name="code">
+			$("#imageWraper1").jMerrygoround({
+				radiusX: 250,
+				radiusY: 40,
+				centerX: 270,
+				centerY: 130,
+				width: 200,
+				height: 150,
+				action: "click",
+				motion: "grow",
+				easing: "easeInOutQuart",
+				duration: 400,
+				targetElem: "a",
+				reflection: true
+			});
+		</textarea>
+
+        <!-- <table>
+          <tr class="table-top">
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+          </tr>
+          <tr>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          </table> -->
+          
+        </div>
+        </div>
+        <div id="footer">
+        <div id="footer-inside">
+        <p id="copyright">&copy; 2008 - <a href="http://hisasann.com/">hisasann</a></p>
+        
+        <!-- Please don't delete this. You can use this template for free and this is the only way that you can say thanks to me -->
+          <p id="dont-delete-this">Design by <a href="http://www.davidkohout.cz">David Kohout</a> | Our tip: <a href="http://www.goodmood.cz" title="Absinthe, Becherovka, Slivovitz store">Absinthe Store</a></p>
+        <!-- Thank you :) -->
+        
+        </div><div style="clear: both;"></div></div>
+		<script src="../js/jquery-1.3.2.js"></script>
+		<script src="../js/jquery.easing.1.3.js"></script>
+		<script src="../js/jMerrygoround.js"></script>
+		<!-- syntax -->
+		<link rel="stylesheet" href="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css" type="text/css" />  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shCore.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/webscript.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				dp.SyntaxHighlighter.ClipboardSwf = 'http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/clipboard.swf';
+				dp.SyntaxHighlighter.HighlightAll('code');
+
+				// fadeInOut
+				$("#logo").fadeOut().fadeIn();
+
+				// smooth scroller
+				$("a[href^=#]").click(function() {
+					var hash = this.hash;
+					if(!hash || hash == "#")
+						return false;
+					$($.browser.safari ? 'body' : 'html')
+						.animate({scrollTop: $(hash).offset().top}, 1500, "easeInOutBounce");
+					return false;
+				});
+
+				// jMerrygoround
+				$("#imageWraper1").jMerrygoround({
+					radiusX: 250,
+					radiusY: 40,
+					centerX: 270,
+					centerY: 130,
+					width: 200,
+					height: 150,
+					action: "click",
+					motion: "grow",
+					easing: "easeInOutQuart",
+					duration: 400,
+					targetElem: "a",
+					reflection: true
+				});
+			});
+		</script>
+  </body>
+</html>
